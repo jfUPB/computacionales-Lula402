@@ -1,15 +1,12 @@
-El siguiente programa está escrito en el lenguaje ensamblador del computador Hack. Este computador no es un computador comercial, sino un computador didáctico que te permitirá acercarte a los conceptos fundamentales de manera amigable.
-````c++
-int main(){
-  cout<<"Hello";
-}
-@1
-D=A
-@2
-D=D+A
-@16
+#### 1er asm 
+``` asm
+@60   
+D=A   
+@9    
+D=D+A 
+@6    
 M=D
-@6
+@0
 0;JMP
 ```
-#### Test
+Se cambiaron los numeros 1 y 2 por 60 y 9. A=6 para que se guarde en esa posición de la memoria. Luego el JPM (instrucción de salto incondicional) se cambió para que saltara a 0
