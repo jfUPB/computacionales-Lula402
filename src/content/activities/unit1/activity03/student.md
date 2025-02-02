@@ -1,4 +1,2 @@
-CPU: ¿Cuáles son sus partes principales? (ALU, registros A y D, PC…).
-Memoria: ¿Cómo se organiza la memoria en el computador Hack? (RAM, ROM, direcciones…). ¿Qué es un mapa de memoria?
-Registros A y D: ¿Cuál es la función de cada uno? ¿En qué se diferencian?
-Contador de programa (PC): ¿Cuál es su función en el ciclo Fetch-Decode-Execute?
+### Diagrama arquitectura hack
+![Arquitectura Hack](https://github.com/user-attachments/assets/c23923ae-b345-486b-9f22-13951f7c84a8)
