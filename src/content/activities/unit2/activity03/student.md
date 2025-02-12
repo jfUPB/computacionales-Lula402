@@ -34,4 +34,4 @@ Los programas anteriores son equivalentes porque ambos representan un ciclo, con
 ```
 
 ### Versiones en ensamblador del while y del for. ¿Qué puedes concluir?
-Comparando las versiones en ensamblador del while y del for puedo concluir que 
+Comparando las versiones en ensamblador del while y del for puedo concluir que la diferencia entre ambos es el condicional usado para realizar el salto. En el ensamblador de while, se usó un condicional que saliera del Loop cuando i-100 > 0, es decir que cuando fuera mayor a 100 saltara al END. Para el ensamblador de for usé el condicional de salto que mantenga el Loop mientras se cumpla que i-100 <= 100.
