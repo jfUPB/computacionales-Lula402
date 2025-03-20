@@ -8,9 +8,8 @@ Entrega: captura de pantalla con el resultado de la ejecución del programa. Aho
 ### <p align=center> Mapa de memoria </p>
 ```
 +----------------------------------------------------------------+
-|                     Segmento de código                         | <--- Segmento de código (instrucciones, funciones)
-|                   (instrucciones, funciones)                   |
-|                   (instrucciones, funciones)                   |
+|    Las intrucciones en lenguaje maquina,                       | <--- Segmento de código (instrucciones, funciones)
+|    previamente compiladas a ensamblador                        |
 +----------------------------------------------------------------+
 | int global_inicializada = 42;                                  | <--- Variables globales y estáticas
 | int global_no_inicializada;                                    |
