@@ -7,6 +7,28 @@
 | **Después**   |<img width="300" alt="image" src="https://github.com/user-attachments/assets/ee39343e-62ab-402d-a20a-1cedac0ea1be" />|<img width="300" alt="image" src="https://github.com/user-attachments/assets/e25a54d2-3427-4ab8-99c8-572a9ddea454" />|
 
 #### Explicación de la diferencia entre objetos creados en el stack y en el heap.
+Los objetos creados en el Stack cobran vida solo cuando se llama a la función o bloque en la que están, cuando la función termina este objeto que está en el Stack "puf" se muere, se libera de la memoria automáticamente. 
+
+Mientras que los objetos creados en el Heap cobran vida ahí cuando uno escribe "new" y los puede usar desde diferentes tramos del código. Lo que pasa es que al terminar la función ya no hay nada referenciandome ese objeto del Heap, entonces ya sea el GC (C#) o uno manualmente (C++) debe ir a borrar ese objeto que quedó como "flotando" en la nada del Heap, por eso hay que guardar su dirección.
+
+![Imagen de WhatsApp 2025-04-08 a las 08 43 47_2bea282a](https://github.com/user-attachments/assets/3c1f3bb1-4904-4ff4-8013-0c49dd625373)
+
 #### pStack ¿Es un objeto o una referencia a un objeto?
+Es un objeto. Por que?
+
+Porque pStack es una variable de tipo "punto", y recordemos que "punto" es un objeto, eso hace que pStack sea un objeto inicializado con (30,40).
 #### pHeap ¿Es un objeto o una referencia a un objeto? Si es una referencia, ¿A qué objeto hace referencia?
+Es una referencia. Por que?
+
+Porque pHeap es una variable que guarda la * (dirección) de un dato tipo "punto". Esa varible pHeap en realidad almacena la dirección del Heap de ese "new punto" que se está creando, además se inicializa en (50, 60).
+
 #### Memory and Locals de Heap ¿Qué observas? ¿Qué significa esto?
+<img width="553" alt="image" src="https://github.com/user-attachments/assets/6a2c0706-ce24-47aa-9767-0dcca7f6bd29" />
+
+<img width="543" alt="image" src="https://github.com/user-attachments/assets/9ae9ec07-3723-48ae-82c3-d25037b54625" />
+
+<img width="328" alt="image" src="https://github.com/user-attachments/assets/827f90e3-ca5b-4993-a8d0-04baa5ba392c" />
+
+<img width="332" alt="image" src="https://github.com/user-attachments/assets/8992884a-a0fd-4a28-bf7f-cd1f76f8a0ea" />
+
+<img width="320" alt="image" src="https://github.com/user-attachments/assets/82b1d61d-8558-4a22-8b6a-64d95a0c9b99" />
