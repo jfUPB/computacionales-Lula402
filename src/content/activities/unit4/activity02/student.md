@@ -72,4 +72,19 @@ En cambio, en C++ no hay GC, entonces uno mismo tiene que estar bien pendiente d
 
 ![Imagen de WhatsApp 2025-04-19 a las 20 54 02_5b24b49a](https://github.com/user-attachments/assets/15423884-4e94-44e5-bc24-67ac7c07fe5d)
 
+<p align=center> ¿Qué hace el método setup? </p>
+
+Recorre la lista de los nodos, para poder llenarla.
+
+<p align=center> ¿Qué hace el método update? </p>
+
+Hace que dependiendo del movimiento del mouse, la cabeza de la snake siga el mouse y que luego cada nodo siga o se intente acercar a la posición del nodo anterior. 
+
+<p align=center> ¿Qué hace el método draw? </p>
+
+Dibuja todo lo que queremos ver en pantalla. El fondo asi en gradiente, la snake con en forma de lineas y los circulitos que tiene cada nodo al alrededor.
+
+<p align=center> ¿Qué hace el método keyPressed?</p>
+
+Dependiendo si se presiona ***c, a, r, s*** se hace una acción. C limpia toda la serpiente, a añade un nodo, r elimina el último nodo, s toma un screenshot del canvas.
 
