@@ -154,6 +154,6 @@ Con la tecla espacio:
 
 <img width="300" alt="image" src="https://github.com/user-attachments/assets/5513e0cb-eb9f-419a-bbdf-8fa8d2feca6e" />
 
-<p align= center> ¿Cómo puedes interactuar con la aplicación? (hay interacción con el teclado y el mouse) </p>
+<p align= center> ¿Cómo puedes interactuar con la aplicación? </p>
 
 Puedo interactuar usando los clicks del mouse, tanto el derecho como el izquierdo. Con la tecla espacio se crean mil particulas y ahí es cuando el canvas se llena de las figuras. Con la tecla **S** se guarda el screenshot de lo que se esté viendo en el canvas.
