@@ -123,11 +123,8 @@ Es el molde de las galletas para que las partículas que se creen hereden de est
 Tiene los métodos: update(), draw(), isDead(), shouldExplode(), etc.
 
 ### RisingParticle
-Es la que sube desde abajo.
-Sube por un tiempo o hasta cierta altura.
-Cuando llega a ese punto, explota.
+Es la que sube desde abajo. Sube por un tiempo o hasta cierta altura, entonces cuando llega a ese punto "máximo", explota.
 Tiene color, posición, velocidad, tiempo de vida, etc.
-Se ve como un círculo más grande.
 
 ### Explosiones 
 Aparecen cuando la particula que subió explota.
@@ -141,8 +138,7 @@ Direcciones totalmente random.
 Se dibujan como cuadraditos.
 
 #### StarExplosion
-Dibuja líneas que parecen rayitos de estrella.
-Un poco más artística.
+Dibuja líneas que parecen los rayitos de una estrella.
 
 <p align=center> Captura pantallas de la aplicación funcionando </p>
 
