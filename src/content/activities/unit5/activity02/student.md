@@ -119,5 +119,39 @@ En los campos de memoria usa los mismos que tiene ExplosionParticle y should exp
 Se implementa con dos punticos
 
 ``` class ExplosionParticle : public Particle ```
+
 ``` class CircularExplosion : public ExplosionParticle ```
 
+### <p align=center> Pregunta 11 </p>
+```cpp
+#include <iostream>
+
+class A { public: int a; };
+class B { public: int b; };
+class C : public A, public B { public: int c; };
+
+int main() {
+            A aObj;
+            B bObj;
+            C cObj;
+
+            std::cout << "Dirección de A: " << &aObj << std::endl;
+            std::cout << "Dirección de B: " << &bObj << std::endl;
+            std::cout << "Dirección de C: " << &cObj << std::endl;
+            std::cout << "Dirección de A en C:  " << (A*)&cObj << std::endl;
+            std::cout << "Dirección de A en C:   " << (B*)&cObj << std::endl;
+           }
+```
+(A*)&cObj es decir que la dirección de c sea un puntero a la A que tiene adentro.
+
+### <p align=center> Pregunta 12 </p>
+
+![Imagen de WhatsApp 2025-05-15 a las 00 57 04_2e3eb443](https://github.com/user-attachments/assets/b7662494-9618-42ac-80e4-3100777d1f61)
+
+### <p align=center> Pregunta 13 </p>
+
+Aca se puede ver que se llamó update y si es un particle*, pero especifica que es una rising particle y por eso usó todo lo que tiene rising especificamente.
+
+<img width="818" alt="image" src="https://github.com/user-attachments/assets/5cb85833-87aa-4a50-89cd-288655ffc821" />
+
+Los métodos virtuales hacen posible el polimorfismo mientras se ejecuta. Cuando una función es virtual, el compilador no decide en tiempo de compilación qué versión ejecutar, es en ejecución que entra _vtable
