@@ -5,7 +5,9 @@ Espero que al depurar el .cpp en la función de draw que es donde se supone que 
 
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/71848944-b768-4929-9580-7c4c188aa3b7" />
 
+
 <img width="600" alt="image" src="https://github.com/user-attachments/assets/16455730-b157-492c-8173-ed5e8383a4f0" />
+
 
 #### ¿Qué puedes observar? 
 El momento en el que se crea un objeto de tipo ofApp y se le asigna una dirección de memoria.
@@ -21,6 +23,11 @@ Que this apunta a un objeto tipo ofApp
 
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/ed19c13c-a238-41e7-950f-e8f63c89d442" />
 
+Entonces creería que lo siguiente es todo el objeto:
+
+<img width="295" alt="image" src="https://github.com/user-attachments/assets/8346a064-81d5-4f4d-9f50-2e36f55da9ef" />
+
+
 <img width="600" alt="image" src="https://github.com/user-attachments/assets/70ea287a-22df-4b25-b9ef-2b398a5e4200" />
 
 #### Explosión de tipo 0, que es la circular:
@@ -34,6 +41,26 @@ Que hasta que en el canvas no de un click, la memoria me advierte "No disponible
 
 <img width="600" alt="image" src="https://github.com/user-attachments/assets/d609f5b2-7e17-4aaa-b937-893513e89b38" />
 
-Me dice a donde apunta this, me muestra las paraticulas y sus tipos (como rising o circular). Me muestra el tipo de explisión (si es 0,1 o 2). Numparticles que es un valor randomizado entre 20 y 30, que luego se va a usar en el ciclo en el que se determina el tipo de explosión.
+Me dice a donde apunta this, me muestra las paraticulas y sus tipos (como rising o circular). Me muestra el tipo de explisión (si es 0, 1 o 2). Numparticles que es un valor randomizado entre 20 y 30, que luego se va a usar en el ciclo en el que se determina el tipo de explosión.
 
 #### ¿Qué puedes concluir? NO OLVIDES tener a la mano todas la jerarquía de clases que componen a CircularExplosion. De esta manera podrás identificar cada parte del objeto en memoria.
+Concluyo que CircularExplosion hereda de ExplosionParticle, y que ExplosionParticle hereda de Particle. 
+
+### <p align=center> Pregunta 3 </p>
+Entonces primero le di click al canvas, creé una particula. En variables salió lo siguiente, de ahí agarré la dirección de this (particle) y tambien me fije que si fuera explosion=0 (circular)
+
+<img width="820" alt="image" src="https://github.com/user-attachments/assets/699a424b-9f46-4a84-bd38-556d67113a6a" />
+
+Luego busqué esa dirección en memoria. Si se supone que cuando se crea una particula y se usa un método virtual, lo primero que aparece en el objeto en memoria es el _vtable. En este caso creo que lo que resalté con azul es el _vtable.
+
+<img width="332" alt="image" src="https://github.com/user-attachments/assets/abe85c78-9f12-4eda-a69a-aea60ac946dd" />
+
+Con little endian _vtable es 0x0000000140555260, la busco en memoria. No sabría cual pertenece a cual, pero se supone que cada una de esas lineas de memoria es la dirección a la funcion que se llamó.
+
+<img width="325" alt="image" src="https://github.com/user-attachments/assets/35d0bd42-1b4b-4d70-bd96-a2affb6eddca" />
+
+Ahí solo creé 1 particula que es rising particle y que en tipo de explosion dice circular. Me metí a particles, esta es la [0] y dentro de _vfprt están las funciones, que segun eso usó 7 funciones para tan solo esa particula.
+Mi tabla de funciones se ve así: 
+
+<img width="862" alt="image" src="https://github.com/user-attachments/assets/d35d99d3-e510-4171-bb7c-4901c97f9fdf" />
+
